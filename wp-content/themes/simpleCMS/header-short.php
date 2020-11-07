@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ICNDY</title>
+    <title>About us</title>
     <meta name="description" content=" ">
     <meta name="keywords" content=" ">
     <?php wp_head(); ?>
@@ -36,28 +36,19 @@
         </symbol>
     </svg>
     <!--end of svg-sprites-->
-    <header class="header">
-        <div class="content header__wrap">
-            <div class="header__top">
-                <a class="logo" href="<?php echo home_url() ?>"><img class="logo__img" src="<?php echo get_template_directory_uri() . '/assets/images/header/logo.png' ?>" alt="logo"></a>
-                <div class="burger header__burger">
-                    <span></span>
-                </div>
-                <nav class="header__nav">
-                    <?php
-                    wp_nav_menu([
-                        'theme_location'  => 'top',
-                        'container'       => 'ul',
-                        'menu_class'      => 'header__list',
-                    ]); ?>
-                </nav>
+    <header class="short-header">
+        <div class="content short-header-wrap">
+            <a class="logo" href="<?php echo home_url() ?>"><img class="logo__img" src="<?php echo get_template_directory_uri() . '/assets/images/header/logo.png' ?>" alt="logo"></a>
+            <div class="burger header__burger">
+                <span></span>
             </div>
-            <div class="header__intro">
-                <div class="header__title">
-                    <h1 class="h1">STÜSSY2014</h1>
-                    <p class="subtitle header__subtitle">shop now</p>
-                </div>
-            </div>
-            <div class="header__arrow"><img src="<?php echo get_template_directory_uri() . '/assets/images/header/Arrow.png" alt="arrow' ?>"></div>
+            <nav class="header__nav">
+                <?php
+                wp_nav_menu([
+                    'theme_location'  => 'top',
+                    'container'       => 'ul',
+                    'menu_class'      => 'header__list',
+                ]); ?>
+            </nav>
         </div>
     </header>

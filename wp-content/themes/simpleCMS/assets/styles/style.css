@@ -111,7 +111,7 @@
   transition: color 0.3s linear;
 }
 .current-menu-item {
-  color: #f84545;
+  color: #f84545 !important;
 }
 .header__intro {
   margin-top: 17.8770949721%;
@@ -592,4 +592,28 @@
 .section-404 a:hover {
   color: #0d3f67;
   text-decoration: underline;
+}
+/* short-header */
+.short-header {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(10, 2, 8),
+    rgb(18, 7, 13),
+    rgb(25, 12, 17),
+    rgb(33, 17, 22),
+    rgb(41, 22, 26),
+    rgb(48, 27, 31),
+    rgb(56, 33, 35),
+    rgb(63, 38, 40),
+    rgb(71, 43, 44),
+    rgb(79, 48, 49),
+    rgb(86, 53, 53),
+    rgb(94, 58, 58)
+  );
+  height: 150px;
+}
+.short-header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
