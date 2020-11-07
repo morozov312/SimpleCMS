@@ -1,7 +1,12 @@
 <?php
 add_action('wp_enqueue_scripts', 'get_styles');
 add_action('wp_footer', 'get_scripts');
-
+add_action('after_setup_theme', function () {
+    register_nav_menus([
+        'top' => 'Меню в шапке',
+        'bottom' => 'Меню в подвале'
+    ]);
+});
 function get_styles()
 {
     wp_enqueue_style('style', get_stylesheet_uri());

@@ -97,7 +97,7 @@
 .header__burger {
   margin-right: 35px;
 }
-.header__link {
+.header__list .menu-item {
   font-family: "Proxima Nova";
   font-weight: 600;
   text-transform: uppercase;
@@ -106,9 +106,12 @@
   letter-spacing: 7.88px;
   color: #fff;
 }
-.header__link:hover {
+.menu-item:hover {
   color: #f84545;
   transition: color 0.3s linear;
+}
+.current-menu-item {
+  color: #f84545;
 }
 .header__intro {
   margin-top: 17.8770949721%;
@@ -260,7 +263,11 @@
   width: 100%;
   max-width: 66.2%;
 }
-.footer__link {
+.footer__ul {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__ul .menu-item {
   font-family: "Proxima Nova";
   font-weight: 600;
   text-transform: uppercase;
@@ -269,13 +276,19 @@
   letter-spacing: 7.88px;
   color: #1a1a1a;
 }
-.footer__link:hover {
+.footer__ul .menu-item:hover {
   color: #f84545;
   transition: color 0.3s linear;
 }
-.footer__ul {
-  display: flex;
-  justify-content: space-between;
+.inactive-link {
+  pointer-events: none;
+  font-family: "Proxima Nova";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1em;
+  letter-spacing: 7.88px;
+  color: #1a1a1a;
 }
 
 .icons {
@@ -313,8 +326,7 @@
     max-width: 950px;
   }
 
-  .header__link,
-  .footer__link {
+  .menu-item {
     font-size: 13px;
   }
 
@@ -347,7 +359,7 @@
     max-width: 80%;
   }
 
-  .footer__link {
+  .menu-item {
     font-size: 11px;
   }
 }
@@ -415,7 +427,7 @@
   .footer__wrap {
     flex-direction: column-reverse;
   }
-  .footer__link {
+  .menu-item {
     font-size: 14px;
   }
   .footer__ul {
@@ -578,6 +590,6 @@
   transition: color 0.2s linear;
 }
 .section-404 a:hover {
-  color:#0d3f67;
+  color: #0d3f67;
   text-decoration: underline;
 }

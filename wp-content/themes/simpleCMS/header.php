@@ -44,13 +44,12 @@
                     <span></span>
                 </div>
                 <nav class="header__nav">
-                    <ul class="header__list">
-                        <li><a class="header__link" href="https://github.com/morozov312/Simple-Grid-and-Pug" target="_blank">MENS</a></li>
-                        <li><a class="header__link" href="https://github.com/morozov312/Simple-Grid-and-Pug" target="_blank">WOMENS</a></li>
-                        <li><a class="header__link" href="https://github.com/morozov312/Simple-Grid-and-Pug" target="_blank">BRANDS</a></li>
-                        <li><a class="header__link" href="https://github.com/morozov312/Simple-Grid-and-Pug" target="_blank">SALE</a></li>
-                        <li><a class="header__link" href="https://github.com/morozov312/Simple-Grid-and-Pug" target="_blank">NEWS</a></li>
-                    </ul>
+                    <?php
+                    wp_nav_menu([
+                        'theme_location'  => 'top',
+                        'container'       => 'ul',
+                        'menu_class'      => 'header__list',
+                    ]); ?>
                 </nav>
             </div>
             <div class="header__intro">
