@@ -1,16 +1,8 @@
-<?php 
-    /*
+<?php
+/*
         Template name: About
     */
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>АаААААААА</h2>
-</body>
-</html>
+<?php get_header() ?>
+<h2>АаААААААА</h2>
+<?php get_footer() ?>
