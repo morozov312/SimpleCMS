@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Proxima Nova Light';
+	src: url('../fonts/proxima_nova_light.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/proxima_nova_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/proxima_nova_light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/proxima_nova_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/proxima_nova_light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/proxima_nova_light.svg#proxima_nova_light') format('svg'); /* Chrome < 4, Legacy iOS */
+}

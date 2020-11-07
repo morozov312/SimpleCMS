@@ -3,3 +3,6 @@
     Author: morozov312
     Version: 1.0.0
 **/
+#html {
+    margin-top: 0 !important;
+}
