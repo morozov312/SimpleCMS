@@ -35,10 +35,11 @@
             </a></div>
     </div>
 </footer>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/slider.js"></script>
-<script src="js/burger.js"></script>
+<script src="js/burger.js"></script> -->
+<?php wp_footer() ?>
 </body>
 
 </html>
