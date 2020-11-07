@@ -7,7 +7,7 @@ function addSlider() {
     })
 }
 $(document).ready(function () {
-    let initialWidth = $(window).currWidth()
+    let initialWidth = $(window).width()
     let needReload = false
     let isExist = false
     if (initialWidth < 768) {
@@ -17,15 +17,15 @@ $(document).ready(function () {
         needReload = true
     }
     $(window).resize(function () {
-        let currWidth = $(window).currWidth()
-        if (currWidth < 768) {
+        let width = $(window).width()
+        if (width < 768) {
             $('.tiles__wrap').addClass('slider')
-            if ($('.tiles__wrap') && !isExist) {
+            if (!isExist) {
                 addSlider()
                 isExist = true
                 needReload = true
             }
-        } else if (currWidth > 768 && needReload) {
+        } else if (width > 768 && needReload) {
             $('.tiles__wrap').removeClass('slider');
             location.reload()
             needReload = false
