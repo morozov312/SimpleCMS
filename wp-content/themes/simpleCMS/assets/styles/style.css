@@ -266,7 +266,7 @@
   font-weight: 600;
   text-transform: uppercase;
   font-size: 18px;
-  line-height: 1em;
+  line-height: 1.2em !important;
   letter-spacing: 7.88px;
   color: #1a1a1a;
 }
@@ -416,7 +416,7 @@
     text-align: center;
   }
   .footer__ul li {
-    margin: 6px 0;
+    margin: 1em 0;
   }
   .icons {
     margin-top: 30px;
@@ -560,5 +560,4 @@
   justify-content: space-between;
   align-items: center;
   max-height: 150px;
-  
 }

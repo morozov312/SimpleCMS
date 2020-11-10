@@ -58,12 +58,12 @@
 .statistics-list ul li h4 {
     text-transform: uppercase;
     color: #1a1a1a;
-    font-size: calc(8px + 13 * ((100vw - 320px) / 1440));
+    font-size: calc(10px + 13 * ((100vw - 320px) / 1440));
     line-height: 1.5em;
 }
 .statistics-list ul li span {
     font-family: "Open Sans", sans-serif;
-    font-size: calc(8px + 13 * ((100vw - 320px) / 1440));
+    font-size: calc(10px + 13 * ((100vw - 320px) / 1440));
     font-weight: 400;
     color: #8b8b8b;
 }
