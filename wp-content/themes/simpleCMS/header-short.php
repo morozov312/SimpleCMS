@@ -38,11 +38,12 @@
     <!--end of svg-sprites-->
     <header class="short-header">
         <div class="content short-header-wrap">
-            <a class="logo" href="<?php echo home_url() ?>"><img class="logo__img" src="<?php echo get_template_directory_uri() . '/assets/images/header/logo.png' ?>" alt="logo"></a>
-            <div class="burger header__burger">
-                <span></span>
-            </div>
-            <nav class="header__nav">
+            <div class="short-header__top">
+                <a class="logo" href="<?php echo home_url() ?>"><img class="logo__img" src="<?php echo get_template_directory_uri() . '/assets/images/header/logo.png' ?>" alt="logo"></a>
+                <div class="burger header__burger">
+                    <span></span>
+                </div>
+                <nav class="header__nav">
                 <?php
                 wp_nav_menu([
                     'theme_location'  => 'top',
@@ -50,5 +51,6 @@
                     'menu_class'      => 'header__list',
                 ]); ?>
             </nav>
+            </div>
         </div>
     </header>

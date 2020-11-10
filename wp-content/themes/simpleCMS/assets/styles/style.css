@@ -371,8 +371,11 @@
   .mobile-nav {
     display: block;
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 20%;
+  }
+  .tall-header {
+    height: 70vh !important;
   }
   .mobile-nav .header__list {
     flex-direction: column;
@@ -528,9 +531,6 @@
   }
 }
 /* short-header */
-.tall-header {
-  height: 70vh !important;
-}
 .short-header {
   background-image: linear-gradient(
     to bottom right,
@@ -551,6 +551,14 @@
 }
 .short-header-wrap {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  padding-left: 2%;
+}
+.short-header__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 150px;
+  
 }
