@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import "reset.min.css";
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url("../fonts/Proxima_Nova_light/fonts/proxima_nova_light.eot");
+  /* IE 9 Compatibility Mode */
+  src: url("../fonts/Proxima_Nova_light/fonts/proxima_nova_light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Proxima_Nova_light/fonts/proxima_nova_light.woff2") format("woff2"),
+    url("../fonts/Proxima_Nova_light/fonts/proxima_nova_light.woff") format("woff"),
+    url("../fonts/Proxima_Nova_light/fonts/proxima_nova_light.ttf") format("truetype"),
+    url("../fonts/Proxima_Nova_light/fonts/proxima_nova_light.svg#proxima_nova_light") format("svg");
+  /* Chrome < 4, Legacy iOS */
+}
+@import url("https://fonts.googleapis.com/css2?family=Passion+One:wght@900&family=Ultra&display=swap");
+.page-404 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/404/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .section-404 {
+    font-size: calc(16px + 25 * ((100vw - 320px) / 1380));
+    background-color: #ffffff6b;
+    width: 40%;
+    height: 50%;
+    border: 0.5em #fff solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Proxima Nova Light";
+    flex-direction: column;
+    position: relative;
+    color: #000000;
+  }
+  .section-404 h2 {
+    color: #313131;
+  }
+  .section-404 h1 {
+    position: absolute;
+    font-family: "Passion One", cursive;
+    font-family: "Ultra", serif;
+    font-size: calc(50px + 110 * ((100vw - 320px) / 1380));
+    top: 5%;
+    letter-spacing: -5px;
+    font-weight: 900;
+  }
+  .section-404 a {
+    position: absolute;
+    bottom: 10%;
+    font-size: calc(10px + 20 * ((100vw - 320px) / 1380));
+    transition: color 0.2s linear;
+  }
+  .section-404 a:hover {
+    color: #0d3f67;
+    text-decoration: underline;
+  }
