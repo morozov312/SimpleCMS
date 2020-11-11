@@ -1,0 +1,188 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce theme v1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2016-04-06 12:10+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Textdomain-Support: yes\n"
+"Language: ru\n"
+"X-Generator: Poedit 1.8.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+# @ woocommerce
+#: functions.php:40
+msgid "Ukrainian hryvnia"
+msgstr "Украинская гривна"
+
+msgid "Product Custom Fild"
+msgstr "Произвольное поле товарной записи"
+
+msgid "WC Sku"
+msgstr "WC Артикул"
+
+msgid "Custom Fild"
+msgstr "Произвольное поле"
+
+# @ woocommerce
+#: functions.php:40
+msgid "Russian ruble"
+msgstr "Российский рубль"
+
+# @ woocommerce
+#: functions.php:40
+msgid "Belarusian ruble%s"
+msgstr "Белорусский рубль%s"
+
+# @ woocommerce
+#: functions.php:40
+msgid ""
+"Log Qiwi events, such as IPN requests, inside <code>woocommerce/logs/qiwi."
+"txt</code>"
+msgstr ""
+"Журнал событий, таких как запросы/ответы на/от сервера Qiwi, внутри "
+"документа <code>woocommerce/logs/qiwi.txt</code>"
+
+# @ woocommerce
+#: functions.php:40
+msgid ""
+"Log Yandex.Money events, such as IPN requests, inside <code>woocommerce/logs/"
+"yandexmoney.txt</code>"
+msgstr ""
+"Журнал событий, таких как запросы/ответы на/от сервера Яндекс, внутри "
+"документа <code>woocommerce/logs/yandexmoney.txt</code>"
+
+# @ woocommerce
+#: functions.php:40
+msgid ""
+"Log LiqPay events, such as IPN requests, inside <code>woocommerce/logs/"
+"liqpay.txt</code>"
+msgstr ""
+"Журнал событий, таких как запросы/ответы на/от сервера LiqPay, внутри "
+"документа <code>woocommerce/logs/liqpay.txt</code>"
+
+# @ woocommerce
+#: functions.php:40
+msgid ""
+"Log Privat24 events, such as IPN requests, inside <code>woocommerce/logs/"
+"privat24.txt</code>"
+msgstr ""
+"Журнал событий, таких как запросы/ответы на/от сервера Privat24, внутри "
+"документа <code>woocommerce/logs/privat24.txt</code>"
+
+# @ woocommerce
+#: functions.php:40
+msgid ""
+"Log WebMoney events, such as IPN requests, inside <code>woocommerce/logs/"
+"webmoney.txt</code>"
+msgstr ""
+"Журнал событий, таких как запросы/ответы на/от сервера WebMoney, внутри "
+"документа <code>woocommerce/logs/webmoney.txt</code>"
+
+msgid ""
+"Log Z-Payment events, such as IPN requests, inside <code>woocommerce/logs/"
+"zpayment.txt</code>"
+msgstr ""
+"Журнал событий, таких как запросы/ответы на/от сервера Z-Payment, внутри "
+"документа <code>woocommerce/logs/zpayment.txt</code>"
+
+msgid ""
+"Log Interkassa events, such as IPN requests, inside <code>woocommerce/logs/"
+"interkassa.txt</code>"
+msgstr ""
+"Журнал событий, таких как запросы/ответы на/от сервера Interkassa, внутри "
+"документа <code>woocommerce/logs/interkassa.txt</code>"
+
+# @ woocommerce
+#: functions.php:40
+msgid "Debug Log"
+msgstr "Журнал отладки"
+
+# @ woocommerce
+#: functions.php:40
+msgid "Enable logging"
+msgstr "Включить журналирование"
+
+# @ woocommerce
+#: functions.php:40
+msgid ""
+"Pay via Qiwi; you can pay with your credit card if you don't have a Qiwi "
+"account or terminal."
+msgstr ""
+"Оплатить через Qiwi. Вы также  можете заплатить пластиковой картой или через "
+"терминал."
+
+msgid ""
+"Pay via Interkassa; you can pay with your credit card if you don't have a "
+"Interkassa account or terminal."
+msgstr "Заплатить через Interkassa"
+
+# @ woocommerce
+#: functions.php:40
+msgid ""
+"Pay via LiqPay; you can pay with your credit card if you don't have a LiqPay "
+"account or terminal."
+msgstr ""
+"Оплатить через LiqPay. Вы можете заплатить пластиковой картой, если у вас "
+"нет LiqPay аккаунта или через терминал."
+
+msgid ""
+"Thank you for your order, please click the button below to pay with LiqPay."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить при "
+"помощи LiqPay."
+
+msgid ""
+"Thank you for your order, please click the button below to pay with Qiwi."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить при "
+"помощи Qiwi."
+
+msgid ""
+"Thank you for your order, please click the button below to pay with Privat24."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить при "
+"помощи Privat24."
+
+msgid ""
+"Thank you for your order, please click the button below to pay with WebMoney."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить при "
+"помощи WebMoney."
+
+msgid ""
+"Thank you for your order, please click the button below to pay with "
+"Robokassa."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить при "
+"помощи Robokassa."
+
+msgid ""
+"Thank you for your order, please click the button below to pay with Z-"
+"Payment."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить c "
+"помощью Z-Payment."
+
+msgid ""
+"Thank you for your order, please click the button below to pay with "
+"Chronopay."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить при "
+"помощи Chronopay"
+
+msgid ""
+"Thank you for your order, please click the button below to pay with "
+"Interkassa."
+msgstr ""
+"Спасибо за заказ, пожалуйста, нажмите на кнопку внизу, чтобы оплатить при "
+"помощи Interkassa."
