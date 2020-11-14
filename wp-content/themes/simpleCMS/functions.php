@@ -39,3 +39,8 @@ function mytheme_add_woocommerce_support()
 
 add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+
+add_filter("loop_shop_per_page", function ($cols) {
+
+    return 8;
+}, 20);
