@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.5.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-10 17:31:34+0000\n"
+"PO-Revision-Date: 2020-11-13 14:54:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -4250,7 +4250,7 @@ msgstr "Свежая версия WordPress доступна для обновл
 
 #: wp-admin/update-core.php:254
 msgid "https://wordpress.org/support/article/updating-wordpress/"
-msgstr "https://ru.wordpress.org/support/article/debugging-in-wordpress/"
+msgstr "https://ru.wordpress.org/support/article/updating-wordpress/"
 
 #. translators: 1: Documentation on WordPress backups, 2: Documentation on
 #. updating WordPress.
@@ -4487,7 +4487,7 @@ msgstr "Перейти к визуальной настройке"
 
 #: wp-admin/nav-menus.php:658
 msgid "<a href=\"https://wordpress.org/support/article/appearance-menus-screen/\">Documentation on Menus</a>"
-msgstr "<a href=\"https://wordpress.org/support/article/appearance-menus-screen/\">Документация по меню</a>"
+msgstr "<a href=\"https://ru.wordpress.org/support/article/appearance-menus-screen/\">Документация по меню</a>"
 
 #: wp-admin/nav-menus.php:645
 msgid "To add a new menu instead of assigning an existing one, <strong>click the &#8217;Use new menu&#8217; link</strong>. Your new menu will be automatically assigned to that theme location"

@@ -10,7 +10,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
     <!--svg-sprites-->
     <svg display="none">
         <symbol id="inst" viewBox="0 0 169.063 169.063">
@@ -44,13 +44,13 @@
                     <span></span>
                 </div>
                 <nav class="header__nav">
-                <?php
-                wp_nav_menu([
-                    'theme_location'  => 'top',
-                    'container'       => 'ul',
-                    'menu_class'      => 'header__list',
-                ]); ?>
-            </nav>
+                    <?php
+                    wp_nav_menu([
+                        'theme_location'  => 'top',
+                        'container'       => 'ul',
+                        'menu_class'      => 'header__list',
+                    ]); ?>
+                </nav>
             </div>
         </div>
     </header>
