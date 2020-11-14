@@ -113,7 +113,7 @@
   text-align: center;
 }
 .header__subtitle {
-  margin-top: 50px;
+  margin-top: 50px !important;
 }
 .header__arrow {
   display: flex;

@@ -1,0 +1,506 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2016-08-31 12:21+0530\n"
+"PO-Revision-Date: 2016-08-31 12:22+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:120
+#: admin/class-size-chart-for-woocommerce-admin.php:121
+#: admin/class-size-chart-for-woocommerce-admin.php:122
+#: admin/class-size-chart-for-woocommerce-admin.php:123
+msgid "Size Charts"
+msgstr "Tableaux des tailles"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:124
+msgid "Add New"
+msgstr "Ajouter un nouveau"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:125
+msgid "Add New Size Charts"
+msgstr "Ajouter de nouvelles grandeurs"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:126
+msgid "New Size Charts"
+msgstr "Nouveaux grandeurs"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:127
+msgid "Edit Size Charts"
+msgstr "Modifier des grandeurs"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:128
+msgid "View Size Charts"
+msgstr "Voir des grandeurs"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:129
+msgid "All Size Charts"
+msgstr "Toutes les grandeurs"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:130
+msgid "Search Size Charts"
+msgstr "Rechercher des grandeurs"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:131
+msgid "Parent Size Charts:"
+msgstr "Parent des grandeurs:"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:132
+msgid "No chart found."
+msgstr "Pas de graphique trouvée."
+
+#: admin/class-size-chart-for-woocommerce-admin.php:133
+msgid "No charts found in Trash."
+msgstr "Aucun graphiques trouvés dans la corbeille."
+
+#: admin/class-size-chart-for-woocommerce-admin.php:138
+msgid "Description."
+msgstr "La description."
+
+#: admin/class-size-chart-for-woocommerce-admin.php:165
+#: admin/includes/size-chart-settings-form.php:19
+msgid "Size Chart Settings"
+msgstr "Paramètres Tableau des Tailles"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:169
+msgid "Select Size Chart"
+msgstr "Sélectionnez Tableau des tailles"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:173
+msgid "Assign Category"
+msgstr "Attribuer Catégorie"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:177
+msgid "Assign Product"
+msgstr "Affecter le produit"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:326
+msgid "Upload an Image"
+msgstr "Ajouter une image"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:327
+msgid "Use this image"
+msgstr "Utilisez cette image"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:339
+#: includes/class-size-chart-for-woocommerce.php:220
+msgid "Settings"
+msgstr "Paramètres"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:374
+msgid "settings saved."
+msgstr "paramètres sauvegardés."
+
+#: admin/class-size-chart-for-woocommerce-admin.php:517
+msgid "Size Chart Type"
+msgstr "Graphique Taille Type"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:518
+msgid "Action"
+msgstr "Action"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:530
+msgid "Default Template"
+msgstr "modèle par défaut"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:532
+msgid "Custom Template"
+msgstr "modèle personnalisé"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:537
+msgid "Clone"
+msgstr "Cloner"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:537
+msgid "Preview"
+msgstr "Aperçu"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:577
+msgid "Welcome to Size Chart for WooCommerce 1.0.0"
+msgstr "Bienvenue au Tableau des tailles pour WooCommerce 1.0.0"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:581
+#, php-format
+msgid ""
+"%s <p class='size-chart-div-congo'>Congratulations! You are about to use "
+"full Customize and easy to used Size Chart plugin as per your needs for your "
+"ECommerce store.</p>"
+msgstr ""
+"%s <p class='size-chart-div-congo'>Félicitations à vous! Vous êtes sur le "
+"point d' utiliser pleinement Personnaliser et facile à utilisé des tailles "
+"plug-in selon vos besoins pour votre boutique en ligne.</p>"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:587
+msgid "Overview"
+msgstr "aperçu"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:587
+msgid "Checkout our other plugins"
+msgstr "Caisse nos autres plugins"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:610
+msgid "Go To Size Chart Settings"
+msgstr "Aller à taille Graphique Paramètres"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:615
+msgid ""
+"Subscribe for latest plugin update and get notified when we update our "
+"plugin and launch new products for free!"
+msgstr ""
+"Abonnez-vous pour le dernier changement plugin et être averti quand nous "
+"mettons à jour notre plugin et lancer de nouveaux produits gratuitement!"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:698
+msgid "Add product custom size guides to any of your WooCommerce products."
+msgstr ""
+"Ajouter des guides de taille produit sur ​​mesure à tous vos produits "
+"WooCommerce."
+
+#: admin/class-size-chart-for-woocommerce-admin.php:699
+msgid ""
+"<p>Size Chart For WooCommerce plugin opens the possibility to create "
+"customize size chart options. With this plugin has ready made size chart "
+"template and allows you to create custom Size Charts and apply to specific "
+"category and product in your online store.</p>"
+msgstr ""
+"<p>Tableau des tailles Pour WooCommerce plug-in ouvre la possibilité de "
+"créer des options de tableau de la taille de personnalisation . Avec ce "
+"plugin a ready made modèle de graphique de taille et vous permet de créer "
+"sur mesure des grandeurs et d'appliquer à la catégorie spécifique et produit "
+"dans votre boutique en ligne .</p>"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:700
+#: admin/includes/size-chart-settings-form.php:20
+msgid "Default size chart template"
+msgstr "modèle de graphique Taille par défaut"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:701
+msgid ""
+"<p>With this plugin have sample default size chart template, So you can "
+"direct apply to product or category.</p>"
+msgstr ""
+"<p>Avec ce plugin ont échantillon modèle de graphique de taille par défaut , "
+"donc vous pouvez diriger appliquer au produit ou à une catégorie.</p>"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:702
+#: admin/includes/size-chart-settings-form.php:22
+msgid "Create your own size guide"
+msgstr "Créez votre propre guide des tailles"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:703
+msgid ""
+"<p>With this Plugin, you are able to customize/ clone the default size chart "
+"and create your own size guide for anything you imagine!</p>"
+msgstr ""
+"<p>Avec ce plugin , vous êtes en mesure de personnaliser / cloner le "
+"diagramme de taille par défaut et créer votre propre guide de taille pour "
+"tout ce que vous imaginez !</p>"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:704
+#: admin/includes/size-chart-settings-form.php:24
+msgid "Comprehensive display"
+msgstr "affichage complet"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:705
+msgid ""
+"<p>Customers will be able to fully understand your product and buy it "
+"without making unnecessary questions regarding size.</p>"
+msgstr ""
+"<p>Les clients seront en mesure de comprendre pleinement votre produit et "
+"l'acheter sans questions inutiles concernant la taille .</p>"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:737
+msgid "Paid Plugins"
+msgstr "Plugins payés"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:762
+msgid "Free Plugins"
+msgstr "Plugins gratuites"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:863
+msgid "Show All Template"
+msgstr "Tout afficher Template"
+
+#: admin/class-size-chart-for-woocommerce-admin.php:864
+msgid "Hide Default Template"
+msgstr "Masquer le modèle par défaut"
+
+#: admin/includes/size-chart-assign-category.php:33
+msgid "No Category Assign"
+msgstr "Non Catégorie Assign"
+
+#: admin/includes/size-chart-assign-product.php:38
+msgid "No Product Assign"
+msgstr "Aucun produit Assign"
+
+#: admin/includes/size-chart-contents.php:17
+#: public/includes/size-chart-contents.php:17
+msgid "How to measure"
+msgstr "Comment mesurer"
+
+#: admin/includes/size-chart-meta-box-content-form.php:29
+msgid "Label"
+msgstr "Étiquette"
+
+#: admin/includes/size-chart-meta-box-content-form.php:30
+msgid "Chart Label"
+msgstr "Graphique Étiquette"
+
+#: admin/includes/size-chart-meta-box-content-form.php:35
+msgid "Primary Chart Image"
+msgstr "Graphique principal image"
+
+#: admin/includes/size-chart-meta-box-content-form.php:36
+msgid "Add/Edit primary chart image below"
+msgstr "Ajouter / Modifier l'image du graphique ci-dessous primaire"
+
+#: admin/includes/size-chart-meta-box-content-form.php:46
+msgid "Upload"
+msgstr "Télécharger"
+
+#: admin/includes/size-chart-meta-box-content-form.php:50
+msgid "Chart Categories"
+msgstr "Graphique Catégories"
+
+#: admin/includes/size-chart-meta-box-content-form.php:51
+msgid "Select categories for chart to appear on."
+msgstr "Choisissez les catégories de tableau apparaissent sur."
+
+#: admin/includes/size-chart-meta-box-content-form.php:64
+msgid "Chart Position"
+msgstr "Graphique Position"
+
+#: admin/includes/size-chart-meta-box-content-form.php:65
+msgid "Select if the chart will display as a popup or as a additional tab"
+msgstr ""
+"Sélectionnez si le graphique affiche comme un popup ou comme un onglet "
+"supplémentaire"
+
+#: admin/includes/size-chart-meta-box-content-form.php:68
+msgid "Additional Tab"
+msgstr "Tab supplémentaires"
+
+#: admin/includes/size-chart-meta-box-content-form.php:69
+msgid "Modal Pop Up"
+msgstr "Modal Pop Up"
+
+#: admin/includes/size-chart-meta-box-content-form.php:74
+msgid "Chart Table Style"
+msgstr "Graphique Table de style"
+
+#: admin/includes/size-chart-meta-box-content-form.php:75
+msgid "Chart Table Styles (Default Style)"
+msgstr "Tableau Styles de tableau ( Default Style )"
+
+#: admin/includes/size-chart-meta-box-content-form.php:78
+msgid "Default Style"
+msgstr "Default style"
+
+#: admin/includes/size-chart-meta-box-content-form.php:79
+msgid "Minimalistic"
+msgstr "minimaliste"
+
+#: admin/includes/size-chart-meta-box-content-form.php:80
+msgid "Classic"
+msgstr "Classique"
+
+#: admin/includes/size-chart-meta-box-content-form.php:81
+msgid "Modern"
+msgstr "Moderne"
+
+#: admin/includes/size-chart-meta-box-content-form.php:82
+msgid "Custom Style"
+msgstr "Coutume Style"
+
+#: admin/includes/size-chart-meta-box-content-form.php:87
+msgid "Chart Table"
+msgstr "Graphique Tableau"
+
+#: admin/includes/size-chart-meta-box-content-form.php:88
+msgid "Add/Edit chart below"
+msgstr "Ajouter / Modifier le graphique ci-dessous"
+
+#: admin/includes/size-chart-select-chart-form.php:36
+msgid "Select Chart"
+msgstr "Sélectionnez Graphique"
+
+#: admin/includes/size-chart-settings-form.php:21
+msgid ""
+"This plugin have sample default size chart template, So you can direct apply "
+"to product or category."
+msgstr ""
+"Ce plugin a échantillon graphique de taille par défaut modèle, donc vous "
+"pouvez diriger appliquer au produit ou à une catégorie."
+
+#: admin/includes/size-chart-settings-form.php:23
+msgid ""
+"This Plugin, you are able to customize/ clone the default size chart and "
+"create your own size guide for anything you imagine!"
+msgstr ""
+"Ce plugin , vous êtes en mesure de personnaliser / cloner le diagramme de "
+"taille par défaut et créer votre propre guide de taille pour tout ce que "
+"vous imaginez!"
+
+#: admin/includes/size-chart-settings-form.php:25
+msgid ""
+"Customers will be able to fully understand your product and buy it without "
+"making unnecessary questions regarding size."
+msgstr ""
+"Les clients seront en mesure de comprendre pleinement votre produit et "
+"l'acheter sans questions inutiles concernant la taille."
+
+#: admin/includes/size-chart-settings-form.php:31
+msgid "General Settings"
+msgstr "réglages généraux"
+
+#: admin/includes/size-chart-settings-form.php:32
+msgid ""
+"With this setting you can configure size chart table style like table head "
+"font color, table row color, table head background color etc."
+msgstr ""
+"Avec ce réglage , vous pouvez configurer le tableau des tailles de table de "
+"style comme la couleur de la police de la tête de la table , la couleur de "
+"ligne de table , table de couleur tête de fond , etc."
+
+#: admin/includes/size-chart-settings-form.php:35
+msgid "Table Head Background Color"
+msgstr "Contexte Table Head Couleur"
+
+#: admin/includes/size-chart-settings-form.php:41
+msgid "Table Head Font Color"
+msgstr "Table Head Couleur de police"
+
+#: admin/includes/size-chart-settings-form.php:47
+msgid "Table Even Row Color"
+msgstr "Table Même rangée Couleur"
+
+#: admin/includes/size-chart-settings-form.php:53
+msgid "Table Odd Raw Color"
+msgstr "Table Odd Raw Couleur"
+
+#: admin/includes/size-chart-settings-form.php:61
+msgid "Global Settings"
+msgstr "Paramètres globaux"
+
+#: admin/includes/size-chart-settings-form.php:62
+msgid ""
+"With this setting you can add size chart label and it will same for all "
+"product size charts."
+msgstr ""
+"Avec ce réglage, vous pouvez ajouter la taille tableau étiquette et il sera "
+"de même pour toutes les cartes de taille du produit."
+
+#: admin/includes/size-chart-settings-form.php:65
+msgid "Tab Label"
+msgstr "Tab Étiquette"
+
+#: admin/includes/size-chart-settings-form.php:69
+msgid "It is visible on product details page in the custom tab."
+msgstr ""
+"Il est visible sur la page produit de détails dans l'onglet personnalisé ."
+
+#: admin/includes/size-chart-settings-form.php:72
+msgid "Popup Label"
+msgstr "Popup Étiquette"
+
+#: admin/includes/size-chart-settings-form.php:80
+msgid "Pop Up Settings"
+msgstr "Apparaitre Paramètres"
+
+#: admin/includes/size-chart-settings-form.php:81
+msgid ""
+"With this setting you can configure size chart popup link position, color "
+"and you can apply custom class also."
+msgstr ""
+"Avec ce réglage , vous pouvez configurer le tableau des tailles lien "
+"contextuel position, la couleur et vous pouvez appliquer classe "
+"personnalisée aussi."
+
+#: admin/includes/size-chart-settings-form.php:84
+msgid "Chart Popup Label Position"
+msgstr "Graphique Popup Étiquette Position"
+
+#: admin/includes/size-chart-settings-form.php:87
+msgid "Before Summary Text"
+msgstr "Avant Résumé Texte"
+
+#: admin/includes/size-chart-settings-form.php:88
+msgid "After Add to Cart"
+msgstr "Après Ajouter au panier"
+
+#: admin/includes/size-chart-settings-form.php:89
+msgid "Before Add to Cart"
+msgstr "Avant Ajouter au panier"
+
+#: admin/includes/size-chart-settings-form.php:90
+msgid "After Product Meta"
+msgstr "Après Meta produit"
+
+#: admin/includes/size-chart-settings-form.php:95
+msgid "Label Text Color"
+msgstr "Étiquette Couleur du texte"
+
+#: admin/includes/size-chart-settings-form.php:101
+msgid "Label Class"
+msgstr "Étiquette classe"
+
+#: admin/includes/size-chart-settings-form.php:109
+msgid "Save Changes"
+msgstr "Sauvegarder les modifications"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:80
+msgid "Women's Shoes Size Chart"
+msgstr "Chaussures Tableau des Tailles des femmes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:97
+msgid "Women's Cloth size chart"
+msgstr "Tissu de tableau des tailles des femmes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:114
+msgid "Women's T-shirt / Tops size chart"
+msgstr "T -shirt femme / Tops tableau des tailles"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:130
+msgid "Women's Jeans And Jeggings Size Chart"
+msgstr "Jeans Et jeggings Tableau des Tailles des femmes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:146
+msgid "Women's Dress Size Chart "
+msgstr "Robe Tableau des Tailles des femmes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:162
+msgid "Men's Shoes Size Chart"
+msgstr "Chaussures Tableau des Tailles des Hommes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:178
+msgid "Men's Jeans & Trousers Size Chart"
+msgstr "Jeans & Pantalons Tableau des Tailles des Hommes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:194
+msgid "Men's T-Shirts & Polo Shirts Size Chart"
+msgstr "T-shirts et polos Tableau des tailles pour hommes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:210
+msgid "Men's Shirts Size Chart"
+msgstr "Shirts Tableau des Tailles des Hommes"
+
+#: includes/class-size-chart-for-woocommerce-activator.php:226
+msgid "Men's Waistcoats Size Chart"
+msgstr "Vestons Tableau des Tailles des Hommes"
+
+#: includes/class-size-chart-for-woocommerce.php:221
+msgid "Docs"
+msgstr "Docs"
+
+#: includes/class-size-chart-for-woocommerce.php:222
+msgid "Support"
+msgstr "Soutien"

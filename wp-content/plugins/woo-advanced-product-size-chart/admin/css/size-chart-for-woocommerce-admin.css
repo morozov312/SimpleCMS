@@ -1,0 +1,111 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+#subscribemeaecfree{margin-right:8px}
+
+#size-chart-meta-fields input[type="text"],#size-chart-meta-fields input[type="password"],#size-chart-meta-fields input[type="checkbox"],#size-chart-meta-fields input[type="color"],#size-chart-meta-fields input[type="date"],#size-chart-meta-fields input[type="datetime"],#size-chart-meta-fields input[type="datetime-local"],#size-chart-meta-fields input[type="email"],#size-chart-meta-fields input[type="month"],#size-chart-meta-fields input[type="number"],#size-chart-meta-fields input[type="search"],#size-chart-meta-fields input[type="radio"],#size-chart-meta-fields input[type="tel"],#size-chart-meta-fields input[type="time"],#size-chart-meta-fields input[type="url"],#size-chart-meta-fields input[type="week"],#size-chart-meta-fields select,textarea{border:1px solid #ddd;-webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.07);box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.07);background-color:#fff;color:#32373c;outline:none;-webkit-transition:0.05s border-color ease-in-out;transition:0.05s border-color ease-in-out;width:99%!important}
+.field-title h4{margin-bottom:0}
+
+.field-description{color:#AAA;font-style:italic;margin:0 0 16px!important}
+#size-chart-meta-fields #field{border-bottom:1px solid #dfdfdf;overflow:hidden;padding:0 0 16px 0}
+
+#chart-table,#chart-table-1,#chart-table-2{display:none}
+.title-wrap h2{font-size:20px!important;margin-left:0!important;padding-left:0!important}
+.preview_chart{cursor:pointer}
+#size-chart tr:nth-child(2n+1){background:#ebe9eb}
+.chart-content-list{display:inline-block;float:left;width:71%;padding-right:10px;text-align:left}
+.chart-content-list span{font-size:16px;font-weight:bold}
+.chart-content-list li{font-size:14px;padding:3px}
+table#size-chart tr th{font-size:14px;font-weight:bold}
+table#size-chart tr td{font-size:12px}
+
+table#size-chart tr th,table#size-chart tr td{text-align:center;word-wrap:break-word}
+.chart-image img{width:100%}
+.chart-content-image img{height:auto;max-width:100%}
+.chart-table{clear:both;margin-top:15px;float:left}
+.chart-table table{border-collapse:separate;border-spacing:0;border-width:1px 0 0 1px;margin:0 0 1.75em;table-layout:fixed;width:100%;border:1px solid #d1d1d1}
+
+.chart-table th,td{padding:0.4375em}
+
+.chart-table table,.chart-table th,.chart-table td{border:1px solid #d1d1d1}
+
+.chart-table td,.chart-table th{border-width:0 1px 1px 0}
+
+.size-chart-model .remodal-close::before,.size-chart-model .remodal-close{right:0;left:auto}
+table#size-chart tr td:last-child{border-right:0}
+#wait{display:none;position:absolute;top:50%;left:50%;padding:2px;z-index:9999999}
+div.size-chart-setting h1{font-size:20px;font-weight:bold;padding-bottom:20px}
+div#size-chart-setting-fields .set-size-chart-fieldset{background:#fff none repeat scroll 0 0}
+.set-size-chart-fieldset{border:1px solid #ccc;margin-bottom:30px;padding:20px}
+div#size-chart-setting-fields legend{background-color:#e7e7e7;border:1px solid #ccc;padding:5px 10px;font-weight:bold;font-size:15px}
+#size-chart-setting-fields .set-size-chart-fieldset table.form-table tbody tr th{width:22%!important}
+.assign-item ul{margin:0 0 0 20px;list-style:disc}
+.wp-list-table tbody tr td a.preview_chart{background:url("../images/preview-icon.png") no-repeat;padding:0 0 9px 27px}
+.wp-list-table tbody tr td a.clone-chart{background:url("../images/clone-icon.png") no-repeat;padding:0 0 9px 27px}
+.plug-containter .contain-section{display:inline-block;margin-top:30px;width:25%}
+.paid_plugin{margin-bottom:20px}
+.plug-containter{display:inline-block;margin-left:20px;width:100%}
+.paid_plugin h3{border-bottom:1px solid #ccc;padding-bottom:20px}
+.plug-containter .contain-section .contain-img{display:inline-block;width:30%}
+.plug-containter .contain-section .contain-title{display:inline-block;margin-left:10px;vertical-align:middle;width:50%}
+.free_plugin{margin-bottom:20px}
+.free_plugin h3{border-bottom:1px solid #ccc;padding-bottom:20px}
+.plug-containter .contain-section .contain-title a{font-weight:bold;line-height:20px;text-decoration:none}
+.setting-description{font-style:italic;font-size:13px}
+.setting-description p{font-style:italic;font-size:13px}
+.set-size-chart-fieldset-container{background:#fff}
+
+.set-size-chart-fieldset-container .notice-success,div.updated{border-bottom:1px solid #ccc;border-color:#ccc #ccc #ccc #46b450;border-right:1px solid #ccc;border-top:1px solid #ccc}
+.global-setting td:nth-child(2){width:190px}
+.remodal{margin-top:25px}
+
+/* div#field-image a{ background: url("../images/close-icon.png") no-repeat;  width: 32px;  height: 32px; cursor: pointer; display: inline-block;  background-size: 23px; vertical-align: top; margin-left: -29px;  margin-top: 0px;} */
+.sfl-about-first-div{min-height:160px;padding-right:200px;position:relative}
+.sfl-about-first-div img{position:absolute;right:0;top:0}
+.about-wrap .size-chart-whatn-right p{margin-left:0;margin-right:0;max-width:100%}
+.field_image_box{display:inline-block;height:auto}
+.field_image_box a.delete-chart-image{display:none;cursor:pointer}
+.field_image_box:hover a.delete-chart-image{bottom:0;display:block;left:130px;position:absolute;right:88.2%;top:186px;cursor:pointer}
+.size-chart-ft{font-size:12px!important}
+.wrap.about-wrap img{width:auto}
+div#md-size-chart-modal{display:none}
+.md-size-chart-modal-content{margin-top:25px;position:fixed;z-index:199999;top:0;right:0;bottom:0;left:0;text-align:center;-webkit-overflow-scrolling:touch;padding:35px}
+div#md-size-chart-modal .remodal-close{right:0;left:auto;font-weight:600}
+div#md-size-chart-modal .remodal-close:hover,div#md-size-chart-modal .remodal-close:focus{color:#2b2e38;background-color:#d5d5d5;border-color:#d5d5d5}
+.md-size-chart-modal-body{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);color:#2b2e38;background:#fff;position:relative;outline:none;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;-webkit-animation-name:animatetop;-webkit-animation-duration:0.4s;animation-name:animatetop;animation-duration:0.4s;padding:2px 16px;margin:0 auto;z-index:111111;overflow:auto;max-height:100%}
+div.md-size-chart-overlay{position:fixed;z-index:10000;top:-5000px;right:-5000px;bottom:-5000px;left:-5000px;background-color:rgba(0, 0, 0, 0.7)}
+div#md-size-chart-modal .chart-table{float:none;display:inline-block}
+div#md-size-chart-modal .chart-image{clear:both;margin-top:15px;float:left}
+div#md-size-chart-modal .chart-content{clear:both;display:inline-block;width:100%}
+
+/* Pagination and search */
+.size-chart-accordion-section-content{padding:10px 0;overflow:hidden;background:#fff}
+.size-chart-accordion-section-content .posttypediv div.tabs-panel{max-height:300px}
+nav.pagination li.button.active{background:#fff;border-color:#999;box-shadow:inset 0 2px 3px -3px rgba(0, 0, 0, 0.5);transform:translateY(1px)}
+nav.pagination ul.page-numbers li.button{margin:0 1px}
+.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-all nav.pagination-box li{display:inline-block;margin:0 1px}
+.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-all li .page-numbers{color:#555;border-color:#cccccc;background:#f7f7f7;box-shadow:0 1px 0 #cccccc;vertical-align:top;display:inline-block;text-decoration:none;font-size:13px;line-height:22px;height:25px;margin:0;padding:1px 5px;cursor:pointer;border-width:1px;border-style:solid;-webkit-appearance:none;border-radius:3px;white-space:nowrap;box-sizing:border-box}
+.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-all li .page-numbers:hover,.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-all li .page-numbers.current{background:#fafafa;border-color:#999;color:#23282d;font-weight:bold}
+.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-all li .page-numbers.current{cursor:default}
+.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-all li span.page-numbers.dots{border:0;box-shadow:0 0 0 #cccccc;background:#fdfdfd;border-color:transparent;cursor:default}
+.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-search .quick-search-wrap .spinner{display:none;margin:5px;float:right}
+div#size-chart-meta-fields .field-item span.select2.select2-container input{height:inherit;line-height:inherit}
+.size-chart-accordion-section-content div#tabs-panel-posttype-size-chart-search .quick-search-wrap .spinner.is-active{display:block}
+.size-chart-disable legend{color:#ff0000}
+.size-chart-disable table.form-table label{cursor:default;color:#808080}
+div#size-chart-meta-fields option:disabled{color:red;background:#f1f1f1}
+
+/* Close button */
+.remodal-close{position:absolute;top:0;left:0;display:block;overflow:visible;width:35px;height:35px;margin:0;padding:0;cursor:pointer;-webkit-transition:color 0.2s;transition:color 0.2s;text-decoration:none;color:#95979c;border:0;outline:0;background:transparent}
+.remodal-close:hover,.remodal-close:focus{color:#2b2e38}
+.remodal-close::before{font-family:Arial, "Helvetica CY", "Nimbus Sans L", sans-serif!important;font-size:25px;line-height:35px;position:absolute;top:0;left:0;display:block;width:35px;content:"\00d7";text-align:center}
+.about-wrap h1.size-chart-about{font-size:2.1em}
+
+@media only screen and (min-width:641px){.md-size-chart-modal-body{max-width:700px}}
+@media only screen and (max-width:640px){div#md-size-chart-modal .chart-table{overflow:scroll;width:100%}.chart-content-list{width:100%;box-sizing:border-box}div#md-size-chart-modal .chart-table table{width:100%;table-layout:auto;margin-bottom:0;white-space:nowrap}}
+@media only screen and (max-width:500px){table#size-chart tr th{font-size:11px!important}table#size-chart tr td{font-size:10px!important}.chart-content-image{float:none}}
+
+/* Add Animation */
+@-webkit-keyframes animatetop{from{top:-300px;opacity:0}to{top:0;opacity:1}}
+@keyframes animatetop{from{top:-300px;opacity:0}to{top:0;opacity:1}}

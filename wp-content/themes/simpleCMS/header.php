@@ -55,7 +55,9 @@
             <div class="header__intro">
                 <div class="header__title">
                     <h1 class="h1">STÜSSY2014</h1>
-                    <p class="subtitle header__subtitle">shop now</p>
+                    <p class="subtitle header__subtitle">
+                        <a href="<?php echo get_template_directory_uri() . "/shop" ?>">shop now</a>
+                    </p>
                 </div>
             </div>
             <div class="header__arrow"><img src="<?php echo get_template_directory_uri() . '/assets/images/header/Arrow.png" alt="arrow' ?>"></div>

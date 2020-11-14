@@ -1,0 +1,47 @@
+/** add_action( 'wp_head', 'wc_page_noindex' );
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.remodal-wrapper .size-chart-model{padding:35px}
+.chart-content-list{display:inline-block;float:left;width:71%;padding-right:10px;text-align:left}
+.chart-content-list span{font-size:16px;font-weight:bold}
+.chart-content-list li{font-size:14px;padding:3px}
+
+table#size-chart tr th{font-size:14px;font-weight:bold;padding:5px}
+table#size-chart tr td{font-size:12px}
+table#size-chart tr th,table#size-chart tr td{text-align:center;word-wrap:break-word}
+.chart-image img{width:100%}
+.size-chart-model .remodal-close::before,.size-chart-model .remodal-close{right:0;left:auto}
+.chart-content-list p{font-size:14px}
+.chart-content-list>ul{margin-left:20px}
+#chart-button{border-bottom:medium none;box-shadow:none;text-decoration:none}
+.button-wrapper{clear:both;float:left;margin-bottom:15px;width:100%}
+.remodal{margin-top:25px}
+@media only screen and (max-width:500px){table#size-chart tr th{font-size:11px!important}table#size-chart tr td{font-size:10px!important}}
+#size-chart tr:nth-child(2n+1){border-bottom:1px solid #eee}
+table#size-chart{width:100%!important}
+div#md-size-chart-modal{display:none}
+.md-size-chart-modal-content{margin-top:25px;position:fixed;z-index:199999;top:0;right:0;bottom:0;left:0;text-align:center;-webkit-overflow-scrolling:touch;padding:35px}
+div#md-size-chart-modal .remodal-close{right:0;left:auto}
+.md-size-chart-modal-body{-webkit-box-sizing:border-box;box-sizing:border-box;width:100%;-webkit-transform:translate3d(0, 0, 0);transform:translate3d(0, 0, 0);color:#2b2e38;background:#fff;position:relative;outline:none;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;-webkit-animation-name:animatetop;-webkit-animation-duration:0.4s;animation-name:animatetop;animation-duration:0.4s;padding:2px 16px;margin:0 auto;z-index:111111;overflow:auto;max-height:100%}
+div.md-size-chart-overlay{position:fixed;z-index:10000;top:-5000px;right:-5000px;bottom:-5000px;left:-5000px;background-color:rgba(0, 0, 0, 0.7)}
+div#md-size-chart-modal .chart-table{float:none;display:inline-block;width:100%}
+div#md-size-chart-modal .chart-image{clear:both;margin-top:15px;float:left}
+div#md-size-chart-modal .chart-content{clear:both;display:inline-block;width:100%}
+
+.chart-table{clear:both;margin-top:15px;float:left}
+.chart-table table{border-collapse:separate;border-spacing:0;border-width:1px 0 0 1px;margin:0 0 1.75em;table-layout:fixed;width:100%;border:1px solid #d1d1d1}
+.chart-table th,td{padding:0.4375em}
+
+.chart-table table,.chart-table th,.chart-table td{border:1px solid #d1d1d1}
+
+.chart-table td,.chart-table th{border-width:0 1px 1px 0}
+
+@media only screen and (min-width:641px){.md-size-chart-modal-body{max-width:700px}}
+@media only screen and (max-width:640px){div#md-size-chart-modal .chart-table{overflow:scroll;width:100%}.chart-content-list{width:100%;box-sizing:border-box}div#md-size-chart-modal .chart-table table{width:100%;table-layout:auto;margin-bottom:0;white-space:nowrap}}
+
+/* Add Animation */
+@-webkit-keyframes animatetop{from{top:-300px;opacity:0}to{top:0;opacity:1}}
+
+@keyframes animatetop{from{top:-300px;opacity:0}to{top:0;opacity:1}}
