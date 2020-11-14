@@ -21,9 +21,9 @@ function get_styles()
 }
 function get_scripts()
 {
-    if (is_home()) {
+    if (is_page(['ICNDY', 58])) {
         wp_deregister_script('jquery');
-        wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js');
+        wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/d3js/6.2.0/d3.min.js');
         wp_enqueue_script('jquery');
         wp_enqueue_script('slick', get_template_directory_uri() . '/assets/js/slick.min.js', '[jquery]', null, true);
         wp_enqueue_script('slider', get_template_directory_uri() . '/assets/js/slider.js', '[jquery]', null, true);

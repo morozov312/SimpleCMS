@@ -687,3 +687,6 @@
   display: flex;
   justify-content: center;
 }
+.comment-form-rating .stars span a:hover{
+  color: inherit !important;
+}
