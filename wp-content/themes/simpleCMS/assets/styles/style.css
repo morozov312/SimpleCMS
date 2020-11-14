@@ -592,7 +592,7 @@
   max-width: 25%;
   font-weight: 400;
 }
-#comment{
+#comment {
   font-size: 1.5em;
 }
 #sidebar ul[role="navigation"] > li {
@@ -706,7 +706,7 @@ li .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
 }
 
 .products .product.type-product {
-  height: 450px !important;
+  min-height: 450px !important;
 }
 .button.product_type_simple {
   position: absolute !important;
@@ -723,6 +723,21 @@ li .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
 .price {
   margin: 2em 0;
 }
-.woocommerce-privacy-policy-text{
+.woocommerce-privacy-policy-text {
   display: none;
+}
+.form-login {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.form-login div {
+  flex: 60%;
+}
+.product-category.product.first:after {
+  content: "Все товары:";
+  display: block;
+  height: 1em;
+  width: 100%;
+  margin: 1em 0;
 }
