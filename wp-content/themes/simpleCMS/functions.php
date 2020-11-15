@@ -13,7 +13,7 @@ function get_styles()
     if (is_404()) {
         wp_enqueue_style('404', get_template_directory_uri() . '/assets/styles/404.css');
     } else {
-        wp_enqueue_style('main', get_template_directory_uri() . '/assets/styles/style.css');
+        wp_enqueue_style('main', get_template_directory_uri() . '/assets/styles/style.min.css');
     }
     if (is_page([19, 'About - simpleCMS'])) {
         wp_enqueue_style('about us', get_template_directory_uri() . '/assets/styles/about.css');
