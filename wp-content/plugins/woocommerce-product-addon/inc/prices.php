@@ -220,6 +220,35 @@ function ppom_get_field_prices( $ppom_fields_post, $product_id, &$product_quanti
 					}
 				}
 			break;
+			
+			case 'checkbox':
+				
+				foreach($options as $option) {
+					
+					if( $value ) {
+						foreach($value as $val) {
+							
+							$option_raw = ppom_wpml_translate($option['raw'],'PPOM');
+							if( $option_raw == stripcslashes($val) ) {
+								
+								$option_price = isset($option['raw_price']) ? $option['raw_price'] : '';
+								if( $option_price !== '' ) {
+									if(strpos($option_price,'%') !== false){
+										$option_price = ppom_get_amount_after_percentage($product_price, $option_price);
+									}
+									$field_prices[] = ppom_generate_field_price($option_price, $field_meta, $charge, $option, $option_quantity);
+								}
+								
+								// weight
+								if( !empty($option['option_weight'])) {
+									$field_price  = 0;
+									$field_prices[] = ppom_generate_field_price($field_price, $field_meta, 'weight', $option);
+								}
+							}
+						}
+					}
+				}
+			break;
 
 			case 'multiple_select':
 				
@@ -390,34 +419,6 @@ function ppom_get_field_prices( $ppom_fields_post, $product_id, &$product_quanti
 					}
 				}
 				// $field_prices[] = ppom_generate_field_price($option_price, $field_meta, $charge, $option);
-			break;
-			
-			case 'checkbox':
-				
-				foreach($options as $option) {
-					
-					if( $value ) {
-						foreach($value as $val) {
-							
-							if( $option['raw'] == stripcslashes($val) ) {
-								
-								$option_price = isset($option['raw_price']) ? $option['raw_price'] : '';
-								if( $option_price !== '' ) {
-									if(strpos($option_price,'%') !== false){
-										$option_price = ppom_get_amount_after_percentage($product_price, $option_price);
-									}
-									$field_prices[] = ppom_generate_field_price($option_price, $field_meta, $charge, $option, $option_quantity);
-								}
-								
-								// weight
-								if( !empty($option['option_weight'])) {
-									$field_price  = 0;
-									$field_prices[] = ppom_generate_field_price($field_price, $field_meta, 'weight', $option);
-								}
-							}
-						}
-					}
-				}
 			break;
 			
 			case 'file':

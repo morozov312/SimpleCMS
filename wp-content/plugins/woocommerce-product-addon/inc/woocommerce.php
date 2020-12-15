@@ -25,7 +25,6 @@ function ppom_woocommerce_show_fields() {
     // Loading all required scripts/css for inputs like datepicker, fileupload etc
     ppom_hooks_load_input_scripts( $product );
     
-    
     do_action('ppom_after_scripts_loaded', $ppom, $product);
     
     

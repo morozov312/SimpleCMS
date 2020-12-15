@@ -172,12 +172,16 @@ padding: 5px;
 }
 
 /** ========= PPOM Conditional Fields =========== */
-.ppom-c-hide{
+/*.ppom-c-hide{
   display:none;
 }
 
 .ppom-c-show{
   display:block;
+}*/
+
+div[class^="ppom-locked-"], div[class*=" ppom-locked-"] {
+  display: none;
 }
 
 /** =========== Bulkquantity =============== */

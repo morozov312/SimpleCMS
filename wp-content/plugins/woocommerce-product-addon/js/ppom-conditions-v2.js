@@ -13,7 +13,13 @@ jQuery(function($) {
 
             if ($(field).closest('div.ppom-field-wrapper').hasClass('ppom-c-hide')) return;
             const data_name = $(field).data('data_name');
-            ppom_check_conditions(data_name);
+            ppom_check_conditions(data_name, function(element_dataname, event_type) {
+                $.event.trigger({
+                    type: event_type,
+                    field: element_dataname,
+                    time: new Date()
+                });
+            });
         });
 
         $('form.cart').find('div.ppom-c-show').each(function(i, field) {
@@ -25,75 +31,140 @@ jQuery(function($) {
     }, 100);
 
     // $('form.cart').on('change', 'select, input[type="radio"], input[type="checkbox"]', function(ev) {
-    $('form.cart').find('select, input[type="radio"], input[type="checkbox"]').bind('change', function(ev) {
+    
+    $(".ppom-wrapper").on('change', 'select,input:radio,input:checkbox', function(e) {
+
+        let value = null;
+        if (($(this).is(':radio') || $(this).is(':checkbox'))) {
+            value = this.checked ? $(this).val() : null;
+        }
+        else {
+
+            value = $(this).val();
+        }
 
         const data_name = $(this).data('data_name');
         // console.log("Checking condition for ", data_name);
-        ppom_check_conditions(data_name, function(visibility) {
 
-            ppom_hidden_fields = [];
-            $('.ppom-wrapper').find('.ppom-c-hide').each(function(i, field) {
-                const data_name = $(field).data('data_name');
-                ppom_hidden_fields.push(data_name);
-                ppom_set_default_option(data_name);
-                $("#conditionally_hidden").val(ppom_hidden_fields);
+        ppom_check_conditions(data_name, function(element_dataname, event_type) {
+            console.log(`${element_dataname} ===> ${event_type}`);
+            $.event.trigger({
+                type: event_type,
+                field: element_dataname,
+                time: new Date()
             });
         });
-
     });
 
     $(document).bind('ppom_hidden_fields_updated', function(e) {
 
         // $("#conditionally_hidden").val(ppom_hidden_fields);
-        ppom_check_conditions(e.field);
+        // console.log(` hiddend field updated ==> ${e.field}`);
+        // $("#conditionally_hidden").val(ppom_hidden_fields);
+        // ppom_update_option_prices();
     });
 
 
     $(document).bind('ppom_field_hidden', function(e) {
+   
+        var element_type = ppom_get_field_type_by_id(e.field);
+        switch (element_type) {
 
-        console.log(`hidden event ${e.field}`);
-        // if field is already hidden
-
-
-        // ppom_get_field_type_by_id()
-
-        const type = ppom_get_input_dom_type(e.field);
-        const data_name = e.field;
-
-        // console.log(` Type==> ${type}`);
-        switch (type) {
-            case 'checkbox':
-            case 'radio':
-            case 'imageselect':
-                $(`.ppom-input[data-data_name="${data_name}"]`).prop('checked', false);
-                break;
             case 'select':
-                $(`.ppom-input[data-data_name="${data_name}"]`).val('');
+                $('select[name="ppom[fields][' + e.field + ']"]').val('');
                 break;
+
+            case 'multiple_select':
+
+                var selector = $('select[name="ppom[fields][' + e.field + '][]"]');
+                var selected_value = selector.val();
+                var selected_options = selector.find('option:selected');
+
+                jQuery.each(selected_options, function(index, default_selected) {
+
+                    var option_id = jQuery(default_selected).attr('data-option_id');
+                    var the_id = 'ppom-multipleselect-' + e.field + '-' + option_id;
+
+                    $("#" + the_id).remove();
+                });
+
+                if (selected_value) {
+
+                    $('select[name="ppom[fields][' + e.field + '][]"]').val(null).trigger("change");
+                }
+
+                break;
+
+            case 'checkbox':
+                $('input[name="ppom[fields][' + e.field + '][]"]').prop('checked', false);
+                break;
+            case 'radio':
+                $('input[name="ppom[fields][' + e.field + ']"]').prop('checked', false);
+                break;
+
             case 'file':
-                $(`#filelist-${data_name}`).html('');
+                $('#filelist-' + e.field).find('.u_i_c_box').remove();
                 break;
+
+            case 'palettes':
+            case 'image':
+                $('input[name="ppom[fields][' + e.field + '][]"]').prop('checked', false);
+                break;
+
+            case 'imageselect':
+                var the_id = 'ppom-imageselect' + e.field;
+                $("#" + the_id).remove();
+                break;
+
             default:
-                $(`.ppom-input[data-data_name="${data_name}"]`).val('').trigger('change');
+                // Reset text/textarea/date/email etc types
+                $('#' + e.field).val('');
                 break;
         }
 
-        // ppom_hidden_fields.push(e.field);
         $.event.trigger({
             type: "ppom_hidden_fields_updated",
             field: e.field,
             time: new Date()
         });
+        
+        ppom_check_conditions(e.field, function(element_dataname, event_type) {
+            console.log(`${element_dataname} ===> ${event_type}`);
+            $.event.trigger({
+                type: event_type,
+                field: element_dataname,
+                time: new Date()
+            });
+        });
     });
 
-    $(document).bind('ppom_field_shown', function(e) {
+    /*$(document).bind('ppom_field_shown', function(e) {
 
+        console.log(`shown event ${e.field}`);
+        ppom_check_conditions(e.field);
+    });*/
+    
+    $(document).on('ppom_field_shown', function(e) {
+
+        ppom_fields_hidden_conditionally();
+        
+        // Set checked/selected again
+        ppom_set_default_option(e.field);
+        
+        ppom_check_conditions(e.field, function(element_dataname, event_type) {
+            console.log(`${element_dataname} ===> ${event_type}`);
+            $.event.trigger({
+                type: event_type,
+                field: element_dataname,
+                time: new Date()
+            });
+        });
+        
+        
         // Remove from array
         // $.each(ppom_hidden_fields, function(i, item) {
         //     if (item === e.field) {
 
-        //         // Set checked/selected again
-        //         ppom_set_default_option(item);
 
         //         ppom_hidden_fields.splice(i, 1);
         //         $.event.trigger({
@@ -105,19 +176,139 @@ jQuery(function($) {
         //     }
         // });
 
-        console.log(`shown event ${e.field}`);
-        ppom_check_conditions(e.field);
+        // Apply FileAPI to DOM
+        var field_meta = ppom_get_field_meta_by_id(e.field);
+        if (field_meta.type === 'file' || field_meta.type === 'cropper') {
+
+            ppom_setup_file_upload_input(field_meta);
+        }
+
+        // Price Matrix
+        if (field_meta.type == 'pricematrix') {
+            // Resettin
+            $(".ppom_pricematrix").removeClass('active');
+
+            // Set Active
+            var classname = "." + field_meta.data_name;
+            // console.log(classname);
+            $(classname).find('.ppom_pricematrix').addClass('active')
+        }
+
+        //Imageselect (Image dropdown)
+        if (field_meta.type === 'imageselect') {
+
+            var dd_selector = 'ppom_imageselect_' + field_meta.data_name;
+            var ddData = $('#' + dd_selector).data('ddslick');
+            var image_replace = $('#' + dd_selector).attr('data-enable-rpimg');
+            ppom_create_hidden_input(ddData);
+            ppom_update_option_prices();
+            setTimeout(function() {
+                ppom_image_selection(ddData, image_replace);
+            }, 100);
+            // $('#'+dd_selector).ddslick('select', {index: 0 });
+        }
+
+
+        // Multiple Select Addon
+        if (field_meta.type === 'multiple_select') {
+
+            var selector = jQuery('select[name="ppom[fields][' + field_meta.data_name + '][]"]');
+            var selected_value = selector.val();
+            var default_value = field_meta.selected;
+
+            if (selected_value === null && default_value) {
+
+                var selected_opt_arr = default_value.split(',');
+
+                selector.val(selected_opt_arr).trigger('change');
+
+                var selected_options = selector.find('option:selected');
+                jQuery.each(selected_options, function(index, default_selected) {
+
+                    var option_id = jQuery(default_selected).attr('data-option_id');
+                    var option_label = jQuery(default_selected).attr('data-optionlabel');
+                    var option_price = jQuery(default_selected).attr('data-optionprice');
+
+                    ppom_multiple_select_create_hidden_input(field_meta.data_name, option_id, option_price, option_label, field_meta.title);
+                });
+            }
+        }
+
     });
 
 });
 
 function ppom_check_conditions(data_name, callback) {
+
+    let is_matched = false;
+    const ppom_type = jQuery(`.ppom-input[data-data_name="${data_name}"]`).data('type');
+    let event_type, element_data_name;
+    const field_val = ppom_get_element_value(data_name);
+    const f = jQuery(`div.ppom-cond-${data_name}`).filter(function() {
+        // return this.data('cond-val1').match(/\w*-Back/);
+        // console.log(jQuery(this));
+        const total_cond = parseInt(jQuery(this).data('cond-total'));
+        const binding = jQuery(this).data(`cond-bind`);
+        const visibility = jQuery(this).data(`cond-visibility`);
+        element_data_name = jQuery(this).data('data_name');
+
+        for (var t = 1; t <= total_cond; t++) {
+
+            const cond_element = jQuery(this).data(`cond-input${t}`);
+            const cond_val = jQuery(this).data(`cond-val${t}`);
+            const operator = jQuery(this).data(`cond-operator${t}`);
+
+            // const field_val = ppom_get_field_type(field_obj);
+            if (cond_element !== data_name) continue;
+            is_matched = ppom_compare_values(field_val, cond_val, operator);
+            console.log(`${data_name} TRIGGERS :: ${t} ***** ${element_data_name} ==> field value ${field_val} || cond_valu ${cond_val} || operator ${operator} *****`);
+            console.log(`is_matched ==> ${is_matched}`);
+
+            event_type = visibility === 'hide' ? 'ppom_field_hidden' : 'ppom_field_shown';
+            if( !is_matched ) {
+                
+                if (jQuery(this).hasClass(`ppom-locked-${data_name}`)) return;
+                jQuery(this).addClass(`ppom-locked-${data_name} ppom-c-hide`);
+                event_type = 'ppom_field_hidden';
+                if (typeof callback == "function")
+                    callback(element_data_name, event_type);
+            } else if(binding === 'Any' && is_matched) {
+
+                console.log('event_type', event_type);
+                if (typeof callback == "function")
+                    callback(element_data_name, event_type);
+                return is_matched;
+            }
+
+            // if (event_type === 'ppom_field_hidden' && jQuery(this).hasClass('ppom-c-hide')) return;
+
+            // console.log(`field_val ${field_val} === cond_val ${cond_val}`);
+        }
+
+        return is_matched;
+        // return jQuery(this).data('cond-val1') === jQuery(this).val();
+    }).fadeOut('slow', function() {
+        jQuery(this).removeClass(`ppom-locked-${data_name} ppom-c-hide`);
+        // jQuery(this).trigger({
+        //     type: 'ppom_field_hiddenx',
+        //     field: data_name,
+        //     time: new Date()
+
+        // });
+        if (typeof callback == "function")
+            callback(element_data_name, event_type);
+
+        // console.log('event_type', event_type);
+    });
+}
+
+function ppom_check_conditions_bkp(data_name, callback) {
     // const all_conds = jQuery("div[data-cond='1']");
     const field_obj = jQuery(`.ppom-input[data-data_name="${data_name}"]`);
 
     const cond_class = `ppom-cond-${data_name}`;
     const all_conds = jQuery(`div.${cond_class}`);
-    // console.log(all_conds);
+    console.log(all_conds);
     // const $ = jQuery
     jQuery.each(all_conds, function(i, input) {
         // console.log(input);
@@ -128,7 +319,6 @@ function ppom_check_conditions(data_name, callback) {
         const element_data_name = jQuery(this).data('data_name');
 
         let matched = 0;
-
 
         for (var t = 1; t <= total_cond; t++) {
 
@@ -163,17 +353,15 @@ function ppom_check_conditions(data_name, callback) {
             is_matched = ppom_compare_values(element_value, cond_val, operator);
 
 
-            // console.log(` ${element_value} === ${cond_val}`);
+            console.log(` ${element_value} === ${cond_val}`);
             if (is_matched) {
                 matched++;
             }
 
         }
 
-        // console.log(`matched ${matched} === ${total_cond}`);
+        console.log(`matched ${matched} === ${total_cond}`);
         // console.log(`binding ${binding}`);
-
-
 
         if ((matched === total_cond) || (matched > 0 && binding === 'any')) {
             jQuery(this).removeClass('ppom-c-show ppom-c-hide ppom-c-matched');
@@ -214,14 +402,35 @@ function ppom_check_conditions(data_name, callback) {
 
 }
 
-
 function ppom_get_input_dom_type(data_name) {
 
     // const field_obj = jQuery(`input[name="ppom[fields][${data_name}]"], input[name="ppom[fields][${data_name}[]]"], select[name="ppom[fields][${data_name}]"]`);
     const field_obj = jQuery(`.ppom-input[data-data_name="${data_name}"]`);
     const ppom_type = field_obj.closest('.ppom-field-wrapper').data('type');
     return ppom_type;
+}
 
+function ppom_get_element_value(data_name) {
+
+    const ppom_type = ppom_get_input_dom_type(data_name);
+    let element_value = '';
+    switch (ppom_type) {
+        case 'radio':
+        case 'checkbox':
+            element_value = jQuery(`.ppom-input[data-data_name="${data_name}"]:checked`).val();
+            break;
+        case 'image':
+            element_value = jQuery(`.ppom-input[data-data_name="${data_name}"]:checked`).data('label');
+            break;
+        case 'imageselect':
+            element_value = jQuery(`.ppom-input[data-data_name="${data_name}"]:checked`).data('title');
+            break;
+
+        default:
+            element_value = jQuery(`.ppom-input[data-data_name="${data_name}"]`).val();
+    }
+
+    return element_value;
 }
 
 function ppom_compare_values(v1, v2, operator) {
@@ -300,4 +509,17 @@ function ppom_set_default_option(field_id) {
             jQuery("#" + field.data_name).val(field.default_value);
             break;
     }
+}
+
+// Updating conditionally hidden fields
+function ppom_fields_hidden_conditionally() {
+    
+    // Reset 
+    ppom_hidden_fields = [];
+    jQuery(`.ppom-field-wrapper.ppom-c-hide`).filter(function() {
+       
+        const data_name = jQuery(this).data('data_name');
+        ppom_hidden_fields.push(data_name);
+    });
+    console.log("Condionally Hidden", ppom_hidden_fields);
 }

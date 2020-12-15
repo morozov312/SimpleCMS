@@ -10,6 +10,7 @@ var ppom_pricematrix_discount_type = '';
 
 jQuery(function($) {
 
+
     // $('[data-toggle="tooltip"]').tooltip({container:'body', trigger:'hover'});
     var wc_cart_button = jQuery('form.cart').find('button[name="add-to-cart"]');
 
@@ -176,6 +177,21 @@ function ppom_init_js_for_ppom_fields(ppom_fields) {
                 }
 
                 InputSelector.iris(iris_options);
+
+                // Following script is added to close picker 
+                // when color is picked
+                jQuery(document).click(function(e) {
+                    if (!jQuery(e.target).is(".ppom-input.color, .iris-picker, .iris-picker-inner")) {
+                        jQuery('.ppom-input.color').iris('hide');
+                        return e;
+                    }
+                });
+
+                jQuery('.ppom-input.color').click(function(event) {
+                    jQuery('.ppom-input.color').iris('hide');
+                    jQuery(this).iris('show');
+                    return event;
+                });
                 break;
 
                 // Palettes

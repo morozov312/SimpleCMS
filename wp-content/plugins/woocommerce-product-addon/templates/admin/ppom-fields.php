@@ -168,7 +168,7 @@ if( ! defined('ABSPATH' ) ){ exit; }
                         $the_field_id = isset($field_meta['data_name']) ? $field_meta['data_name'] : '';
                         $the_placeholder = isset($field_meta['placeholder']) ? $field_meta['placeholder'] : '';
                         $defualt_fields  = isset(PPOM() -> inputs[$field_type]-> settings) ? PPOM() -> inputs[$field_type]-> settings : array();
-
+						$defualt_fields = apply_filters("ppom_settings_{$field_type}", $defualt_fields, $field_type);
                         $defualt_fields = $form_meta->ppom_tabs_panel_classes($defualt_fields);
 		        ?>
 

@@ -1,11 +1,11 @@
 === Product Size Charts Plugin for WooCommerce ===
-Contributors: dots, freemius
+Contributors: dots
 Donate link: 
 Tags: popup,chart,guideecommerce,size guide, size table, table size, chart size guide, chart size product category, chart size single product, custom size guide, default template,  product size chart, product size guide, size chart template, Woocommerce chart tables
 Requires at least: 4.0
-Tested up to: 5.5
-Stable tag: 2.0.5
-WC tested up to: 4.5
+Tested up to: 5.5.3
+Stable tag: 2.0.8
+WC tested up to: 4.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ Add product size charts with default template or custom size chart to any of you
 
 == Description ==
 
-<a href ="https://www.thedotstore.com/woocommerce-advanced-product-size-charts/" target="_blank">Product Size Charts for WooCommerce</a> allows you to assign readymade size chart templates to the product, category, and create custom size chart for any of your WooCommerce products.
+<a href ="https://bit.ly/3oguAFf" target="_blank">Product Size Charts for WooCommerce</a> allows you to assign readymade size chart templates to the product, category, and create custom size chart for any of your WooCommerce products.
 
 You can also <strong>clone readymade size chart templates</strong> and create your own size charts and assign them to a category or specific products.
 
@@ -110,9 +110,9 @@ Pro Plugin:  PRE-SALE Questions - <a href ="https://www.thedotstore.com/support/
 == 👉 Difference Between Lite and Pro version Product Size chart Plugin ==
 
 
-You can check the detailed difference between Pro and Lite version - <a href ="https://www.thedotstore.com/woocommerce-advanced-product-size-charts/" target="_blank">Click here</a>
+You can check the detailed difference between Pro and Lite version - <a href ="https://bit.ly/3oguAFf" target="_blank">Click here</a>
 
-== 📣 PREMIUM: Product size charts Plugin for WooCommerce -  <a href ="https://www.thedotstore.com/woocommerce-advanced-product-size-charts/" target="_blank">UPGRADE TO PRO NOW</a> ==
+== 📣 PREMIUM: Product size charts Plugin for WooCommerce -  <a href ="https://bit.ly/3oguAFf" target="_blank">UPGRADE TO PRO NOW</a> ==
 
 
 = Need even more features? upgrade the premium plugin version to get all the advanced features. =
@@ -226,6 +226,17 @@ Automatic updates should work great for you.  As always, though, we recommend ba
 2. Size Chart Setting page.
 
 == Changelog ==
+= 2.0.8 =
+* Compatible with WooCommerce 4.7.1
+* Compatible with WordPress 5.5.3
+* Fixed - CSS conflict issue with textarea
+
+= 2.0.7 - 25-11-2020 =
+* Minor bug fixed
+
+= 2.0.6 - 20-11-2020 =
+* Maintenance Releases
+
 = 2.0.5 - 30-09-2020 =
 * Compatible with WooCommerce 4.5.x
 * Compatible with WordPress 5.5.x

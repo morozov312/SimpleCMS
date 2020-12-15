@@ -32,7 +32,7 @@ echo '</span>';
 echo '</div>';
 
 
-echo '<div class="form-row ppom-rendering-fields align-items-center ppom-section-collapse">';
+echo '<div class="form-row ppom-rendering-fields align-items-center ppom-section-collapse uk-grid">';
 
 $posted_values = '';
 if( apply_filters('ppom_retain_after_add_to_cart', true) ) {
@@ -152,8 +152,6 @@ foreach( $ppom_fields_meta as $meta ) {
 	
 	$placeholder 				= isset( $meta['placeholder'] ) ? stripslashes($meta['placeholder']) : '';
 	
-	
-	
 	if(is_array($options)){
 		$options		= array_map("ppom_translation_options", $options);
 	}
@@ -187,10 +185,9 @@ foreach( $ppom_fields_meta as $meta ) {
 		if ($type == 'collapse') continue;
 		
 		$ppom_cond_data = ppom_get_conditional_data_attributes($meta);
-		// ppom_pa($condition);
 		$field_main_wrapper = 'ppom-field-wrapper ppom-col col-md-'.esc_attr($col).' '.esc_attr($input_wrapper_class);
 		
-        $ppom_field_wrapper_div = '<div data-data_name='.esc_attr($data_name).' '.$ppom_cond_data.' class="'.apply_filters('ppom_field_main_wapper_class', $field_main_wrapper, $meta).'">';
+		$ppom_field_wrapper_div = '<div data-data_name='.esc_attr($data_name).' '.$ppom_cond_data.' class="'.apply_filters('ppom_field_main_wapper_class', $field_main_wrapper, $meta).'">';
         echo apply_filters('ppom_field_wrapper_div', $ppom_field_wrapper_div, $meta, $product);
             
         // Text|Email|Date|Number
@@ -242,7 +239,7 @@ foreach( $ppom_fields_meta as $meta ) {
                     
                     
                     $ppom_field_setting = apply_filters('ppom_field_setting', $ppom_field_setting, $meta);
-                    echo NMForm() -> Input($ppom_field_setting, $default_value);
+                    echo apply_filters("ppom_field_html_{$type}", NMForm()->Input($ppom_field_setting, $default_value), $type, $meta);
                 	break;
                 	
                 case 'measure':
@@ -301,8 +298,8 @@ foreach( $ppom_fields_meta as $meta ) {
 		                                );
 		                
 		            $ppom_field_setting = apply_filters('ppom_field_setting', $ppom_field_setting, $meta);
-		            echo NMForm() -> Input($ppom_field_setting, $default_value);
-		            break;
+                    echo apply_filters("ppom_field_html_{$type}", NMForm()->Input($ppom_field_setting, $default_value), $type, $meta);
+                	break;
                 
                 case 'checkbox':
                 	
@@ -324,7 +321,7 @@ foreach( $ppom_fields_meta as $meta ) {
 					              );
 					
 					$ppom_field_setting = apply_filters('ppom_field_setting', $ppom_field_setting, $meta);
-					echo NMForm() -> Input($ppom_field_setting, $default_value);
+					echo apply_filters("ppom_field_html_{$type}", NMForm()->Input($ppom_field_setting, $default_value), $type, $meta);
 					break;
 					
 				case 'select':
@@ -350,7 +347,7 @@ foreach( $ppom_fields_meta as $meta ) {
 					              );
 					
 					$ppom_field_setting = apply_filters('ppom_field_setting', $ppom_field_setting, $meta);
-					echo NMForm() -> Input($ppom_field_setting, $default_value);
+					echo apply_filters("ppom_field_html_{$type}", NMForm()->Input($ppom_field_setting, $default_value), $type, $meta);
 					break;
 					
 				case 'radio':
@@ -373,7 +370,7 @@ foreach( $ppom_fields_meta as $meta ) {
 					              );
 					
 					$ppom_field_setting = apply_filters('ppom_field_setting', $ppom_field_setting, $meta);
-					echo NMForm() -> Input($ppom_field_setting, $default_value);
+					echo apply_filters("ppom_field_html_{$type}", NMForm()->Input($ppom_field_setting, $default_value), $type, $meta);
 					break;
 					
 				case 'timezone':
@@ -523,6 +520,8 @@ foreach( $ppom_fields_meta as $meta ) {
                 	$view_control = (isset( $meta['view_control'] ) ? $meta['view_control'] : '' );
                 	$horizontal_layout = (isset( $meta['horizontal'] ) ? $meta['horizontal'] : '' );
                 	$include_productprice = isset($meta['use_productprice']) ? $meta['use_productprice'] : '';
+                	$min_qty = (isset( $meta['min_qty'] ) ? $meta['min_qty'] : '' );
+                	$max_qty = (isset( $meta['max_qty'] ) ? $meta['max_qty'] : '' );
                 	$default_price = isset($meta['default_price']) ? $meta['default_price'] : '';
                 	
                 	if( !empty($_GET[$data_name]) ) {
@@ -537,6 +536,8 @@ foreach( $ppom_fields_meta as $meta ) {
 					              'label'	  => $field_label,
 					              'required'		=> $required,
                                   'horizontal_layout' => $horizontal_layout,
+                                  'min_qty' => $min_qty,
+                                  'max_qty' => $max_qty,
                                   'view_control'		=> $view_control,
                                   'options'		=> $options,
                                   'include_productprice' => $include_productprice,
@@ -561,7 +562,7 @@ foreach( $ppom_fields_meta as $meta ) {
 					              );
 					
 					$ppom_field_setting = apply_filters('ppom_field_setting', $ppom_field_setting, $meta);
-					echo NMForm() -> Input($ppom_field_setting);
+					echo apply_filters("ppom_field_html_{$type}", NMForm()->Input($ppom_field_setting, $default_value), $type, $meta);
 					break;
 					
 				// Audio/videos
@@ -636,7 +637,7 @@ foreach( $ppom_fields_meta as $meta ) {
 					
                     
                     $ppom_field_setting = apply_filters('ppom_field_setting', $ppom_field_setting, $meta);
-                    echo NMForm() -> Input($ppom_field_setting, $default_value);
+                    echo apply_filters("ppom_field_html_{$type}", NMForm()->Input($ppom_field_setting, $default_value), $type, $meta);
                 	break;
                 	
             	// Cropper

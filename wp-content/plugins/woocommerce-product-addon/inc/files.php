@@ -123,7 +123,7 @@ function ppom_create_thumb_for_meta( $file_name, $product_id, $cropped=false, $s
 	
 	// var_dump($ppom_html);
 	
-	return apply_filters('ppom_meta_file_thumb', $ppom_html);
+	return apply_filters('ppom_meta_file_thumb', $ppom_html, $file_name, $product_id);
 }
 
 

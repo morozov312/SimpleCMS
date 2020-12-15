@@ -231,7 +231,7 @@ function ppom_hooks_load_input_scripts( $product, $ppom_id=null ) {
 		    case 'text':
 		    	if( !empty($field['input_mask']) ) {
                 	//Enqueue masking script
-			    	$ppom_mask_api = PPOM_URL . '/js/inputmask/jquery.inputmask.bundle.js';
+			    	$ppom_mask_api = PPOM_URL . '/js/inputmask/jquery.inputmask.min.js';
     	        	wp_enqueue_script( 'ppom-inputmask', $ppom_mask_api, array('jquery'), PPOM_VERSION, true);
                 }
 		    	
@@ -241,6 +241,7 @@ function ppom_hooks_load_input_scripts( $product, $ppom_id=null ) {
 		        if(isset($field['jquery_dp']) && $field['jquery_dp'] == 'on') {
 		        	$ppom_core_scripts[] = 'jquery-ui-datepicker';
 		        	wp_enqueue_style( 'jqueryui', PPOM_URL.'/js/ui/css/smoothness/jquery-ui-1.10.3.custom.min.css');
+    	        	// wp_enqueue_script( 'ppom-datepciker-fr', 'https://cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/i18n/datepicker.fr-FR.min.js', array('jquery'), PPOM_VERSION, true);
 		        }
 		        break;
 		        
@@ -634,6 +635,7 @@ function ppom_hooks_input_main_wrapper_class($input_wrapper_class, $field_meta) 
 			
 			$element	= isset($rule['elements']) ? $rule['elements'] : '';
 			$input_wrapper_class .= " ppom-cond-{$element}";
+			$input_wrapper_class .= " ppom-locked-{$element}";
 		}
 	}
 	

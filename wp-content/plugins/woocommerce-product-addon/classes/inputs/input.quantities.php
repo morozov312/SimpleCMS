@@ -83,6 +83,16 @@ class NM_Quantities_wooproduct extends PPOM_Inputs{
 					'options'	=> $this->variation_layout(),
 					'default'	=> 'simple_view',
 			),
+			'min_qty' => array (
+					'type' => 'text',
+					'title' => __ ( 'Min Quantity', "ppom" ),
+					'desc' => __ ( 'Enter min quantity allowed.', "ppom" )
+			),
+			'max_qty' => array (
+					'type' => 'text',
+					'title' => __ ( 'Max Quantity', "ppom" ),
+					'desc' => __ ( 'Enter max quantity allowed.', "ppom" )
+			),
 			
 			'default_price' => array (
 					'type' => 'text',

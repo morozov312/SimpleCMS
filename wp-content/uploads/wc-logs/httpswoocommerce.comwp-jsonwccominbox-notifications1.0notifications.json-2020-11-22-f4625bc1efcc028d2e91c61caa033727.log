@@ -1,0 +1,36 @@
+2020-11-22T14:40:22+00:00 ERROR Error getting remote inbox notification data feed
+2020-11-22T14:40:22+00:00 ERROR WP_Error Object
+(
+    [errors] => Array
+        (
+            [http_request_failed] => Array
+                (
+                    [0] => cURL error 28: Resolving timed out after 5000 milliseconds
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+
+2020-11-22T14:40:27+00:00 ERROR Error getting remote inbox notification data feed
+2020-11-22T14:40:27+00:00 ERROR WP_Error Object
+(
+    [errors] => Array
+        (
+            [http_request_failed] => Array
+                (
+                    [0] => cURL error 28: Resolving timed out after 5002 milliseconds
+                )
+
+        )
+
+    [error_data] => Array
+        (
+        )
+
+)
+

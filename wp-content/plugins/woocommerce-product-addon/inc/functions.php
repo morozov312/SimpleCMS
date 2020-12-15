@@ -552,7 +552,7 @@ function ppom_generate_cart_meta( $ppom_cart_fields, $product_id, $ppom_meta_ids
 					$file_thumbs_html = '';
 					foreach($value as $file_id => $file_cropped) {
 						
-						$file_name = $file_cropped['org'];
+						$file_name = isset($file_cropped['org']) ? $file_cropped['org'] : '';
 						$file_thumbs_html .= ppom_create_thumb_for_meta($file_name, $product_id, true, $crop_size);
 						
 						// Adding ratio to cart
@@ -1589,7 +1589,7 @@ function ppom_field_has_stock( $meta, $value ) {
 function ppom_option_has_stock( $option ) {
 
 	$has_stock = true;
-	if( isset($option['stock']) && $option['stock'] != '' && intval($option['stock']) <= 0 )
+	if( isset($option['stock']) && $option['stock'] !== '' && intval($option['stock']) <= 0 )
 		$has_stock = false;	
 		
 	return apply_filters("ppom_option_has_stock", $has_stock, $option);
@@ -1969,7 +1969,8 @@ function ppom_get_conditional_data_attributes( $meta ) {
 		$attr_html .= ' data-cond-bind="'.esc_attr($bound).'"';
 		$attr_html .= ' data-cond-visibility="'.esc_attr($visibility).'"';
 		
-		foreach($conditions['rules'] as $index => $rule){
+		$index = 0;
+		foreach($conditions['rules'] as $rule){
 			
 			$counter	= ++$index;
 			$input		= "input".$counter;

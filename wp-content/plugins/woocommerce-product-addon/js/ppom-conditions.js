@@ -14,6 +14,7 @@ jQuery(function($) {
 
     $(document).on('ppom_field_shown', function(e) {
 
+        
         // Remove from array
         $.each(ppom_hidden_fields, function(i, item) {
             if (item === e.field) {

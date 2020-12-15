@@ -5,6 +5,7 @@
 # Сделанные вручную изменения между этими маркерами будут перезаписаны.
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /simpleCMS/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f

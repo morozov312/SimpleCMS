@@ -90,7 +90,7 @@ jQuery(function($) {
         var a = confirm(del_message);
         if (a) {
             // it is removing from uploader instance
-            var fileid = $(this).closest('.u_i_c_box').attr("data-fileid");
+            var fileid = $(this).closest('.ppom-file-wrapper').attr("data-fileid");
             var file_data_name = $(this).closest('div.ppom-field-wrapper').attr("data-data_name");
             console.log(fileid);
             file_count[file_data_name] = 0;
@@ -146,7 +146,7 @@ jQuery(function($) {
     }); // $.each(ppom_file_vars
 
 
-}); //	jQuery(function($){});
+}); //  jQuery(function($){});
 
 // generate thumbbox 
 function add_thumb_box(file, $filelist_DIV) {
@@ -156,7 +156,7 @@ function add_thumb_box(file, $filelist_DIV) {
 
     jQuery('<div />', {
         'id': 'u_i_c_' + file.id,
-        'class': 'u_i_c_box',
+        'class': 'uk-text-center ppom-file-wrapper',
         'data-fileid': file.id,
         'html': inner_html,
 
@@ -263,7 +263,9 @@ function ppom_setup_file_upload_input(file_input) {
         upload_instance[file_data_name].destroy();
     }
 
-    // console.log(ppom_file_vars);
+
+    // Energy pack
+    var bar = document.getElementById(`ppom-progressbar-${file_data_name}`) || undefined;
 
     var ppom_file_data = {
         'action': 'ppom_upload_file',
@@ -271,6 +273,7 @@ function ppom_setup_file_upload_input(file_input) {
         'ppom_nonce': ppom_file_vars.ppom_file_upload_nonce,
         'product_id': ppom_file_vars.product_id,
     }
+
     upload_instance[file_data_name] = new plupload.Uploader({
         runtimes: ppom_file_vars.plupload_runtime,
         browse_button: 'selectfiles-' + file_data_name, // you can pass in id...
@@ -295,13 +298,12 @@ function ppom_setup_file_upload_input(file_input) {
                 // $filelist_DIV[file_data_name].html('');
 
                 /*$('#uploadfiles-'+file_data_name).bind('click', function() {
-                	upload_instance[file_data_name].start();
-                	return false;
+                    upload_instance[file_data_name].start();
+                    return false;
                 });*/
             },
 
             FilesAdded: function(up, files) {
-
 
                 // Adding progress bar
                 var file_pb = jQuery('<div/>')
@@ -330,6 +332,13 @@ function ppom_setup_file_upload_input(file_input) {
                         // Code to add pending file details, if you want
                         add_thumb_box(file, $filelist_DIV[file_data_name], up);
                         setTimeout('upload_instance[\'' + file_data_name + '\'].start()', 100);
+
+                        // Energy pack
+                        if (bar !== undefined) {
+                            bar.removeAttribute('hidden');
+                            bar.max = file.size;
+                            bar.value = file.loaded;
+                        }
                     });
                 }
 
@@ -442,6 +451,14 @@ function ppom_setup_file_upload_input(file_input) {
                 // Removing progressbar
                 $filelist_DIV[file_data_name].find('.progress').remove();
 
+                if (bar !== undefined) {
+                    setTimeout(function() {
+                        bar.setAttribute('hidden', 'hidden');
+                    }, 1000);
+                    bar.max = file.size;
+                    bar.value = file.loaded;
+                }
+
                 // Trigger
                 jQuery.event.trigger({
                     type: "ppom_file_uploaded",
@@ -452,6 +469,12 @@ function ppom_setup_file_upload_input(file_input) {
             },
 
             UploadProgress: function(up, file) {
+
+                // Energy pack
+                if (bar !== undefined) {
+                    bar.max = file.size;
+                    bar.value = file.loaded;
+                }
 
                 $filelist_DIV[file_data_name].find('.progress-bar').css('width', file.percent + '%');
 
@@ -512,7 +535,7 @@ function ppom_legacy_crop_editor(data_name, image_id, src, file_name, ratios, do
     var w = window.innerWidth * .85;
     var h = window.innerHeight * .85;
 
-    var fileid = jQuery(dom).closest('.u_i_c_box').attr("data-fileid");
+    var fileid = jQuery(dom).closest('.ppom-file-wrapper').attr("data-fileid");
 
     var uri_string = encodeURI('action=ppom_crop_image_editor&width=' + w + '&height=' + h + '&image_url=' + src + '&image_name=' + file_name + '&image_id=' + image_id + '&file_id=' + fileid + '&ratios=' + ratios + '&data_name=' + data_name);
 

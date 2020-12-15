@@ -228,7 +228,6 @@ class Size_Chart_For_Woocommerce {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles_scripts_callback' );
 		$this->loader->add_filter( 'woocommerce_product_tabs', $plugin_public, 'size_chart_custom_product_tab_callback' );
 		$this->loader->add_action( 'woocommerce_before_single_product', $plugin_public, 'size_chart_popup_button_position_callback' );
-		$this->loader->add_filter( 'woocommerce_paypal_args', $plugin_public, 'paypal_bn_code_filter_callback', 99, 1 );
 	}
 
 	/**

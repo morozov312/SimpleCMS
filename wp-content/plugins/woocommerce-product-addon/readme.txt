@@ -4,7 +4,7 @@ Tags: woocommerce, woocommerce pesonalized products, woocommerce custom fields, 
 Donate link: http://www.najeebmedia.com/donate
 Requires at least: 3.5
 Tested up to: 5.5
-Stable tag: 20.5
+Stable tag: 21.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Requires PHP: 5.6
@@ -91,6 +91,14 @@ Drag & Drop input fields with many options. Prices can also be added with option
 9. Attach inputs to bulk products
 
 == Changelog ==
+= 21.1 November 24, 2020 =
+* Bug fixed: [Warning fixed when the field's array is empty](https://wordpress.org/support/topic/image-cropper-error-version-21-0/#post-13694170)
+= 21.0 November 22, 2020 =
+* Feature: [Filter updated for plain text](https://wordpress.org/support/topic/plain-text-email-2/)
+* Bug fixed: [Warning removed when cropper input used](https://wordpress.org/support/topic/image-cropper-cart-error/)
+* Bug fixed: [Pirce issues with chekcbox fixed in different languages](https://wordpress.org/support/topic/wpml-ppom-checkbox-option-price-problem/)
+* Bug fixed: Option showing even stock is 0, now it is fixed.
+* Bug fixed: [Translation issue fixed](https://wordpress.org/support/topic/translation-problem-solved-code-not-included/)
 = 20.5 September 29, 2020 =
 * Feature: Now Tax prefix will be appended to Total Price in Price table if it is set in WooCommerce
 * Feature: [Text input now has price](https://wordpress.org/support/topic/add-on-price-not-in-the-cart-2/)

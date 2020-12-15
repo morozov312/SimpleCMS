@@ -48,6 +48,20 @@ jQuery(function($) {
         });
     }
 
+    if ($('.ppom-input-quantities').length > 0) {
+        PPOMWrapper.on('change', 'input.ppom-quantity', function() {
+
+            const dataname = $(this).closest('.ppom-field-wrapper').attr('data-data_name');
+
+            const _is_valid = ppom_quantities_min_max(dataname);
+            if (_is_valid) {
+                $(this).val(0);
+                ppom_quantities_min_max(dataname);
+            }
+        });
+        $("input.ppom-quantity").trigger("change");
+    }
+
     // WC Variation Quantity Change event
     $(".ppom-wcvq-input").bind('keyup change', function() {
         console.log('text')
@@ -206,6 +220,9 @@ function ppom_update_option_prices() {
             ppom_has_priced_quantities = true;
         }
 
+
+        // console.log('max price', option);
+
         // wc_product_qty.val(1);
 
         // since v18.0 if no price set, no need to use base price
@@ -213,7 +230,6 @@ function ppom_update_option_prices() {
 
         var variation_price = option.price;
         var option_price_with_qty = parseFloat(option.quantity) * parseFloat(variation_price);
-        // console.log(option_price_with_qty);
         // Totals the options
         ppom_option_total += option_price_with_qty;
 
@@ -906,7 +922,7 @@ function ppom_update_get_prices() {
         });
     });
 
-    console.log(options_price_added);
+    // console.log(options_price_added);
     return options_price_added;
 }
 
@@ -1055,4 +1071,45 @@ function ppom_build_input_price_meta(field_dataname) {
     option_price.price          = checked_option_price;
     option_price.apply          = checked_option_apply;*/
 
+}
+
+function ppom_quantities_min_max(dataname) {
+
+    let ppomInputWrapper = jQuery(".ppom-input-" + dataname);
+    let list = jQuery('.ppom-quantity', ppomInputWrapper);
+
+    //convert to array
+    list = Array.from(list);
+
+    let totalQty = 0;
+    let min_qty = '';
+    let max_qty = '';
+    let _input = '';
+    let _return = false;
+
+    list.map((elem, index) => {
+        _input = jQuery(elem);
+        let QTY = parseInt(_input.val()) || 0;
+        min_qty = parseInt(_input.attr('data-min')) || 0;
+        max_qty = parseInt(_input.attr('data-max')) || 0;
+
+        if (isNaN(QTY)) { return false; }
+
+        totalQty += QTY;
+        console.log(totalQty);
+    });
+
+    if (min_qty > totalQty) {
+        jQuery('form.cart').find('button[name="add-to-cart"]').prop('disabled', true);
+    }
+    else if (max_qty < totalQty && max_qty != 0) {
+        alert('Maximum ' + max_qty + ' allowed');
+        ppom_update_option_prices();
+        _return = true;
+    }
+    else {
+        jQuery('form.cart').find('button[name="add-to-cart"]').prop('disabled', false);
+    }
+
+    return _return;
 }

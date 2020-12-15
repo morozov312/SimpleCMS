@@ -306,19 +306,6 @@ class Size_Chart_For_Woocommerce_Public
     }
     
     /**
-     * BN code added.
-     *
-     * @param array $paypal_args pass the order object.
-     *
-     * @return mixed return a array with adding new argument.
-     */
-    public function paypal_bn_code_filter_callback( $paypal_args )
-    {
-        $paypal_args['bn'] = 'Multidots_SP';
-        return $paypal_args;
-    }
-    
-    /**
      * Check if product belongs to a category.
      *
      * @param int $product_id product id.
